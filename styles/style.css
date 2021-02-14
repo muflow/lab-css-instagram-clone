@@ -4,7 +4,264 @@ dark blue: #06365f
 light blue: #1c5380
 */
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+h1 {
+  font-weight: 500;
+  color: #06365f;
+  text-align: center;
+}
+
 body {
   font: 200 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin: 0;
+}
+
+
+#main {
+  background-image: url(../images/bgtile.png);
+  height: 160px;
+  background-size: cover;
+}
+
+
+#phone {
+  display: none;
+}
+
+.insta-logo > img {
+  display: blocK;
+  width: 60%;
+  margin: 0 auto;
+}
+
+
+/* boton login abajo: me he arriesgado en 
+utilizar position:relative para el padre y el button en position:aboslute para
+ponerlo de bajo del h1*/
+.up-header {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 40px;
+
+}
+
+.login-button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 210px;
+  left: 38%;
+  border: 1px solid #06365f;
+  padding: 0.1em;
+  width: 100px;
+  background-image: linear-gradient(#1c5380, #06365f);
+  /*background-color: #1c5380;*/
+  border-radius: 4px;
+}
+
+.home {
+  padding-top: 5px;
+}
+
+.login {
+  font-weight: 400;
+  text-align: center;
+  color: #ffffff;
+}
+/* fin boton login abajo */
+
+.main-content {
+  width: 80%;
+  margin-top: 25px;
+  margin-left: 10%;
+  background-image: url(../images/frame.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding: 0 20px;
+}
+
+.main-content > h1 {
+  padding-top: 30px;
+  padding-bottom: 70px;
+}
+
+.main-content > p {
+  padding-top: 10px;
+}
+
+.play-store {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.apple > img {
+  width: 120px;
+}
+
+.google > img {
+  width: 110px;
+}
+
+/* footer */
+#navigation {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.nav-menu{
+  overflow: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav-menu > li {
+  font-weight: 400;
+  color: #1c5380;
+  text-transform: uppercase;
+  font-size: 1em;
+  padding: 0.2em 0.5em;
+}
+
+.copy {
+  display: block;
+  margin: 0 auto;
+  font-size: 0.8em;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+
+
+@media (min-width: 640px) {
+
+  #main {
+    height: 290px;
+  }
+  
+  #header {
+    display: flex;
+    flex-direction: rox;
+  }
+
+  #phone {
+    display: block;
+  }
+
+  .up-header {
+    position: static;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .login-button {
+    position: static;
+  }
+/* borders */
+.header {
+  display: flex;
+  justify-content: center;
+  padding-top: 80px;
+}
+
+/* sx */
+  #phone {
+    padding-top: 20px;
+    width: 400px;
+  }
+
+  .phones-img {
+    padding-left: 40px;
+  }
+
+  .phones-img > img {
+    width: 340px;
+  }
+
+/* dx */
+  .up-header {
+    width: 470px;
+  }
+
+  /* end borders */
+
+  #main-info {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+  }
+
+  .insta-logo > img {
+    width: 300px;
+  }
+
+  .main-content {
+    padding: 0 35px;
+  }
+
+  .main-content > h1 {
+    font-size: 1.5em;
+    line-height: 1.3em;;
+    text-align: left;
+    padding: 30px 0;
+  }
+
+   .main-content > p {
+    padding: 5px 0;
+  }
+
+  /* badges */
+
+  .play-store {
+    padding-left: 35px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .apple > img {
+    width: 150px;
+  }
+
+  .apple {
+    padding-right: 20px;
+  }
+
+   .google > img {
+     width: 140px;
+  }
+
+  #navigation {
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-menu > li {
+    font-size: 0.8em;
+    font-weight: 500;
+  }
+
+  .copy {
+    display: inline;
+    padding-bottom: 7px;
+    padding-left: 220px;
+  }
+
 }
